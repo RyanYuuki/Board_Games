@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Board Game</title>
 </head>
 <body>
+    <h1>Tic Tac Toe</h1>
+    <div id="msg">
+        <h1 id="Decider">You Won!</h1>
+        <button id="resetBtn">Restart</button>
+        <h3 id="Remark">You are Good!</h3>
+    </div>
     <div class="container">
         <div id="btn"></div>
         <div id="btn"></div>
@@ -17,6 +26,10 @@
         <div id="btn"></div>
         <div id="btn"></div>
         <div id="btn"></div>
+    </div>
+    <div id="Points">
+        User Points --> 0
+        Computer Points --> 0 
     </div>
     <script src="main.js"></script>
 </body>

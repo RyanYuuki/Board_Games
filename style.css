@@ -10,6 +10,7 @@ body {
     background-size: cover;
     font-family: sans-serif;
     color: white;
+    font-family: 'Poppins';
 }
 
 .container {
@@ -39,3 +40,46 @@ body {
     padding: 5px;
     transition:all 0.3s ease;
 }
+
+#Points {
+    position: absolute;
+    bottom: 30px;
+    width: 190px;
+    padding: 15px 40px;
+    border: 1px solid;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+}
+
+h1 {
+    position: absolute;
+    top: 20px;
+    font-size: 38px;
+    text-align: center;
+}
+
+#msg {
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    height: 400px;
+    width: 370px;
+    display: none;
+    place-items: center;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 0 0 7px black;
+}
+#msg button {
+    padding: 10px 30px;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255, 0.8);
+    margin-top: 140px;
+}
+
