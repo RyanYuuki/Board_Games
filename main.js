@@ -45,8 +45,9 @@ function computerTurn() {
             }
         }
         if (index == 8) {
-            checkWinner();
-            alert("Tie Game");
+            deciderElmt.textContent = "Tied!";
+            remarkElmt.textContent = "Try Harder";
+            msgElmt.style.display = "grid";
             isRunning = false;
         } else {
             computerTurn();
