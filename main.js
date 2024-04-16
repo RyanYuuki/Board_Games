@@ -37,14 +37,29 @@ function Game() {
     }
 }
 
-function computerTurn() {
-    let computerMove = Math.floor(Math.random() * 8);
-    if (boardBtns[0].children[computerMove].textContent != '') {
-        computerMove = Math.floor(Math.random() * 8);
+function computerTurn()
+{
+let computerMove = Math.floor(Math.random() * 8);
+if (boardBtns[0].children[computerMove].textContent != '') {
+  computerMove = Math.floor(Math.random() * 8);
+  let index = 0;
+  for (let j = 0; j < 8; j++) {
+    if (boardBtns[0].children[j].textContent != '') {
+      index++;
     }
-    boardBtns[0].children[computerMove].textContent = 'O';
-    playerTurn = true;
+  }
+  if (index == 8) {
     checkWinner();
+    alert("Tie Game");
+    isRunning = false;
+  } else {
+    computerTurn();
+  }
+} else {
+  boardBtns[0].children[computerMove].textContent = 'O';
+  playerTurn = true;
+  checkWinner();
+}
 }
 
 function checkWinner() {
