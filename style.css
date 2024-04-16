@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(lightpink ,lightgreen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("./current_bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 17px;
+    background: rgb(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 5px lightblue;
+}
+
+.container div {
+    display: grid;
+    place-items: center;
+    background: rgb(255, 255, 255, 0.2) ;
+    backdrop-filter: blur(30px);
+    height: 70px;
+    width: 70px;
+    border: 1px solid;
+    border-radius: 7px;
+    font-size: 40px;
+    padding: 5px;
+    transition:all 0.3s ease;
+}
