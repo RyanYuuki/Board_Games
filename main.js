@@ -77,15 +77,6 @@ function checkWinner() {
                 deciderElmt.textContent = "You Lost!";
                 isRunning = false;
             }
-        else if (boardBtns[0].children[combo[0]].textContent != '' &&
-            boardBtns[0].children[combo[0]].textContent !== boardBtns[0].children[combo[1]].textContent &&
-            boardBtns[0].children[combo[0]].textContent !== boardBtns[0].children[combo[2]].textContent) {
-            deciderElmt.textContent = "Tied!";
-            remarkElmt.textContent = "Try Harder";
-            msgElmt.style.display = "grid";
-            isRunning = false;
-            
-        }
             pointsElmt.textContent = `User Points --> ${userPoints} Computer Points --> ${computerPoints}`;
     }
 }
