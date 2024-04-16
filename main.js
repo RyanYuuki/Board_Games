@@ -45,9 +45,6 @@ function computerTurn() {
             }
         }
         if (index == 8) {
-            deciderElmt.textContent = "Tied!";
-            remarkElmt.textContent = "Try Harder";
-            msgElmt.style.display = "grid";
             isRunning = false;
         } else {
             computerTurn();
@@ -61,7 +58,7 @@ function computerTurn() {
 
 function checkWinner() {
     for (let combo of winningCombos) {
-        if (boardBtns[0].children[combo[0]].textContent &&
+        if (boardBtns[0].children[combo[0]].textContent != '' &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[1]].textContent &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[2]].textContent && boardBtns[0].children[combo[2]].textContent == 'X') {
                 userPoints++;
@@ -70,7 +67,7 @@ function checkWinner() {
                 deciderElmt.textContent = "You Won!";
                 isRunning = false;
         }
-        else if (boardBtns[0].children[combo[0]].textContent &&
+        else if (boardBtns[0].children[combo[0]].textContent == '' &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[1]].textContent &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[2]].textContent && boardBtns[0].children[combo[2]].textContent == 'O')
             {
@@ -80,6 +77,15 @@ function checkWinner() {
                 deciderElmt.textContent = "You Lost!";
                 isRunning = false;
             }
+        else if (boardBtns[0].children[combo[0]].textContent != '' &&
+            boardBtns[0].children[combo[0]].textContent !== boardBtns[0].children[combo[1]].textContent &&
+            boardBtns[0].children[combo[0]].textContent !== boardBtns[0].children[combo[2]].textContent) {
+            deciderElmt.textContent = "Tied!";
+            remarkElmt.textContent = "Try Harder";
+            msgElmt.style.display = "grid";
+            isRunning = false;
+            
+        }
             pointsElmt.textContent = `User Points --> ${userPoints} Computer Points --> ${computerPoints}`;
     }
 }
