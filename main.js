@@ -60,7 +60,7 @@ function computerTurn() {
 
 function checkWinner() {
     for (let combo of winningCombos) {
-        if (boardBtns[0].children[combo[0]].textContent &&
+        if (boardBtns[0].children[combo[0]].textContent != '' &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[1]].textContent &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[2]].textContent && boardBtns[0].children[combo[2]].textContent == 'X') {
                 userPoints++;
@@ -69,7 +69,7 @@ function checkWinner() {
                 deciderElmt.textContent = "You Won!";
                 isRunning = false;
         }
-        else if (boardBtns[0].children[combo[0]].textContent &&
+        else if (boardBtns[0].children[combo[0]].textContent =! '' &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[1]].textContent &&
             boardBtns[0].children[combo[0]].textContent === boardBtns[0].children[combo[2]].textContent && boardBtns[0].children[combo[2]].textContent == 'O')
             {
