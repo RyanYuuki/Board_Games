@@ -7,7 +7,7 @@ This repository contains the source code for a simple X O (Tic Tac Toe) board ga
     Responsive Design: Ensures seamless experience across devices.
     Interactive Gameplay: Click to mark cells ('X' or 'O').
     Win Detection: Automatic detection of winning conditions.
-    Upcoming: Reset option for starting a new game.
+    Implemented: Reset option for starting a new game.
 
 # Usage:
 
