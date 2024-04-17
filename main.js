@@ -91,7 +91,7 @@ function checkWinner(index) {
 
         }
         console.log(index);
-        pointsElmt.textContent = `User Points --> ${userPoints} Computer Points --> ${computerPoints}`;
+        pointsElmt.textContent = `User Points: ${userPoints} Computer Points: ${computerPoints}`;
     }
 
     if (draw) {
