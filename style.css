@@ -1,10 +1,24 @@
+@font-face {
+    font-family: Poppins;
+    src: url("/Assets/Fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url("/Assets/Fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Bold2;
+    src: url("/Assets/Fonts/Poppins-ExtraBold.ttf");
+}
+
 body {
-    background: linear-gradient(lightpink ,lightgreen);
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("./current_bg.svg");
+    background-image: url("/Assets/Backgrounds/1.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -25,6 +39,7 @@ body {
     background: rgb(255, 255, 255, 0.05);
     backdrop-filter: blur(30px);
     box-shadow: 0 0 5px lightblue;
+    transition: 0.5s ease-in-out;
 }
 
 .container div {
@@ -39,6 +54,7 @@ body {
     font-size: 40px;
     padding: 5px;
     transition:all 0.3s ease;
+    cursor: pointer;
 }
 
 #Points {
@@ -51,6 +67,7 @@ body {
     background-color: rgb(255, 255, 255, 0.05);
     backdrop-filter: blur(30px);
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
 
 h1 {
@@ -58,6 +75,16 @@ h1 {
     top: 20px;
     font-size: 38px;
     text-align: center;
+    font-family: Poppins-Bold;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.5s ease;
+}
+
+h1:hover {
+    color: black;
+    background: white;
+    transform: scale(1.2);
 }
 
 #msg {
@@ -83,8 +110,158 @@ h1 {
     margin-top: 140px;
 }
 
+.container div:hover {
+    transform: scale(1.2);
+  }
+
 button:active, .container div:active {
   transform: scale(0.9);
 }
 
+#Points:hover {
+    color: black;
+    background: white;
+    transform: scale(1.1);
+}
 
+.Misc-container {
+    border: 2px solid;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 120px;
+    height: 140px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transform: scale(0.0);
+    transition: 0.5s ease;
+    z-index: 1;
+}
+
+#Misc {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 20px;
+    width: 140px;
+    height: 150px;
+}
+ 
+#Misc #timeCard {
+    position: absolute;
+    top: 10px;
+    right: 32px;
+    background: transparent;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    font-size: 20px;
+    z-index: 2;
+}
+
+#Misc #timeCard:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    background: white;
+    color: black;
+}
+
+#timeCard:hover ~ .Misc-container,
+#Misc:hover > .Misc-container 
+{
+    border: 1px solid;
+    transform: scale(1.0);
+}
+
+#timeCard:hover ~  button,
+#Misc:hover >  button {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+#Misc button {
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: absolute;
+    top: 100px;
+    right: 45px;
+    transform: scale(0);
+    transition: 0.5s ease;
+    z-index: 2;
+}
+
+#Themes:hover {
+    color: black;
+    background: white;
+}
+
+.Title, .Back {
+    position: absolute;
+    padding: 10px 20px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.Back {
+    padding: 5px 10px;
+    top: 5px;
+    left: 10px;
+}
+
+
+.Title:hover, .Back:hover{
+    transform: scale(1.2);
+    background: white;
+    color: black;
+    border-radius: 12px;
+}
+.Images {
+    position: relative;
+    display: none;
+    flex-wrap: wrap;
+    max-width: 650px;
+    height: 350px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.5s ease;
+}
+
+.Images img {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow:  0 0 10px black;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.Images img:hover {
+    transform: scale(1.1);
+}
+
+.Images img:active {
+    transform: scale(0.9);
+}
+
+.Title:active, .Back:active {
+    transform: scale(0.9);
+}
+
+button {
+    cursor: pointer;
+}
