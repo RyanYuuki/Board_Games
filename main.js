@@ -163,7 +163,7 @@ function Themes()
     for(let i = 2; i < 8; i++)
     {
         imageElmt[0].children[i].addEventListener("click", (event) => {
-            document.body.style.backgroundImage = `url("/Assets/Backgrounds/${event.originalTarget.alt}")`;
+            document.body.style.backgroundImage = `url("./Assets/Backgrounds/${event.originalTarget.alt}")`;
         });
     }
 }
@@ -184,10 +184,10 @@ function randomTheme() {
         randNum = Math.floor(Math.random() * 6) + 1;
     }
     if(randNum == 6) {
-        document.body.style.backgroundImage = 'url("/Assets/Backgrounds/6.png")';
+        document.body.style.backgroundImage = 'url("./Assets/Backgrounds/6.png")';
     }
     else {
-        document.body.style.backgroundImage = `url("/Assets/Backgrounds/${randNum}.svg")`;
+        document.body.style.backgroundImage = `url("./Assets/Backgrounds/${randNum}.svg")`;
     }
     prevNum = randNum;
 }
