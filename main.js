@@ -37,7 +37,7 @@ function Time() {
     const Seconds = String(date.getSeconds()).padStart(2, '0');
     timeElmt.textContent = `${Hour}:${Minutes}:${Seconds}`;
 }
- 
+
 // End
 
 // Interval for Time Refresh
@@ -154,14 +154,12 @@ function resetGame() {
 // Extra: Themes for Better UI Experience
 
 // Extra : 1. Showing Themes
-function Themes()
-{
+function Themes() {
     containerElmt[0].style.display = "none";
     imageElmt[0].style.display = "flex";
     temp = pointsElmt.innerHTML;
     pointsElmt.textContent = "Pick Your Favourite Theme!";
-    for(let i = 2; i < 8; i++)
-    {
+    for (let i = 2; i < 8; i++) {
         imageElmt[0].children[i].addEventListener("click", (event) => {
             document.body.style.backgroundImage = `url("/Assets/Backgrounds/${event.originalTarget.alt}")`;
         });
@@ -170,20 +168,23 @@ function Themes()
 
 // Extra: 2. Back Out Button
 function revertTheme() {
-    containerElmt[0].style.display = "grid";
-    imageElmt[0].style.display = "none";
-    pointsElmt.textContent = "";
-    pointsElmt.innerHTML = temp;
+    setTimeout(() => {
+        containerElmt[0].style.display = "grid";
+        imageElmt[0].style.display = "none";
+        pointsElmt.textContent = "";
+        pointsElmt.innerHTML = temp;
+    }, 200)
+
 }
 
 // Extra: 3. For Applying Random Theme 
 function randomTheme() {
     let randNum = Math.floor(Math.random() * 6) + 1;
-    
-    while(randNum == prevNum) {
+
+    while (randNum == prevNum) {
         randNum = Math.floor(Math.random() * 6) + 1;
     }
-    if(randNum == 6) {
+    if (randNum == 6) {
         document.body.style.backgroundImage = 'url("/Assets/Backgrounds/6.png")';
     }
     else {
