@@ -1,5 +1,3 @@
-Absolutely! Here's a concise and attractive description tailored for your GitHub README:
-
 # Tic Tac Toe: Modernized & Customizable!
 
 Dive into the classic game of Tic Tac Toe reimagined with a sleek twist! Our HTML/CSS/JS creation not only delivers the timeless gameplay you love but enhances it with a modern aesthetic and smooth features. Keep track of your progress effortlessly with an integrated time card, ensuring you stay engaged in every thrilling match.
