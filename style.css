@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
   width: 300px;
@@ -38,7 +38,7 @@ body {
   border-radius: 17px;
   background: rgb(255, 255, 255, 0.05);
   backdrop-filter: blur(30px);
-  box-shadow: 0 0 5px lightblue;
+  box-shadow: 0 0 15px lightblue inset;
   transition: 0.5s ease-in-out;
 }
 
@@ -272,4 +272,48 @@ button:active,
 
 button {
   cursor: pointer;
+}
+
+.gameMode {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  padding: 30px;
+  border: 1px solid;
+  border-radius: 17px;
+  background: rgb(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 5px lightblue;
+}
+
+.gameMode button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  color: white;
+  height: 70%;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0.2);
+  transition: 0.5s ease;
+}
+
+.gameMode button:hover {
+  transform: scale(1.1);
+  color: black;
+  background-color: white;
+}
+
+.gameMode button:active {
+  transform: scale(0.9);
+}
+
+ion-icon {
+  margin-bottom: 35px;
+  transform: scale(2);
 }
